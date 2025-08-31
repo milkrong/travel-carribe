@@ -1,3 +1,6 @@
+import LiveWeather from './components/LiveWeather';
+import TripChecklist from './components/TripChecklist';
+
 export default function Page() {
   return (
     <>
@@ -14,6 +17,7 @@ export default function Page() {
             <a href="#itinerary">行程与靠港</a>
             <a href="#kagoshima">鹿儿岛上岸</a>
             <a href="#okinawa">冲绳（那霸）上岸</a>
+            <a href="#weather">天气安全</a>
             <a href="#faq">常见问题</a>
             <a
               href="https://www.rcclchina.com.cn/Rccl.Cruise/CruiseDetail?shipCode=SC&sailDate=2025-09-26"
@@ -27,6 +31,7 @@ export default function Page() {
       </header>
 
       <main className="container">
+        <TripChecklist />
         <section className="notice">
           <strong>说明：</strong> 以下时间为参考范例，最终以行前邮件 /
           皇家APP船期与当日“上船最后时间 All aboard”通知为准。
@@ -191,6 +196,81 @@ export default function Page() {
           <div className="tip">
             务必预留返船时间缓冲：<strong>最晚返船前60–90分钟</strong>{' '}
             开始往港口返程，避免误船。
+          </div>
+        </section>
+
+        <section id="weather">
+          <h2>天气与行程安全</h2>
+          {/* 实时天气组件（Open-Meteo） */}
+          <LiveWeather />
+          <div className="grid">
+            <div className="card">
+              <h3>实时查询（官方）</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=460000"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    日本气象厅·鹿儿岛预报（JMA）
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=471000"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    日本气象厅·冲绳/那霸预报（JMA）
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.windy.com/?24.341,129.867,6,m:gust,overlay=wind"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Windy 风力/阵风图（海域风浪参考）
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.jma.go.jp/bosai/map.html#5/26.820/131.934/&elem=warning&typhoon=all"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    日本气象厅·警报与台风信息
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>判读与提醒</h3>
+              <ul>
+                <li>
+                  风速≥12m/s（6级风）或阵风≥15m/s，海上体感明显，甲板活动可能关闭。
+                </li>
+                <li>
+                  降雨/雷暴黄色以上预警，岸上行程以室内/短线为主，预留返船时间。
+                </li>
+                <li>
+                  台风接近时，航线与靠港可能调整，以船方广播与 APP 通知为准。
+                </li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>行前/当天安全清单</h3>
+              <ul>
+                <li>出发前 24 小时：查看 JMA 预报与台风路径。</li>
+                <li>当天早晨：确认靠港城市当日降雨/风力与体感温度。</li>
+                <li>随身：雨具、防晒、便携药品；鞋底防滑。</li>
+                <li>返船：最晚前 60–90 分钟启程回港，避免误船。</li>
+              </ul>
+            </div>
+          </div>
+          <div className="notice" style={{ marginTop: 12 }}>
+            如遇大风大雨或台风影响，请优先遵循船方与港方的安全指引与调整安排。
           </div>
         </section>
 
