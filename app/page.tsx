@@ -83,7 +83,25 @@ export default function Page() {
             <p>
               码头办理登船时间为登船当日 11:30–14:30，请务必按照“登船证”的“指定到达时间”前往码头，切勿早到或迟到。
             </p>
-            <p>上海码头地址：上海市宝山区吴淞口宝杨路 1 号</p>
+            <p>
+              上海码头地址：上海市宝山区吴淞口宝杨路 1 号（
+              <a
+                href="https://uri.amap.com/navigation?to=121.517,31.380,上海吴淞口国际邮轮港&mode=car&src=travel-carribe&callnative=1"
+                target="_blank"
+                rel="noopener"
+              >
+                高德地图导航
+              </a>
+              ·
+              <a
+                href="https://uri.amap.com/marker?position=121.517,31.380&name=上海吴淞口国际邮轮港&src=travel-carribe&callnative=1"
+                target="_blank"
+                rel="noopener"
+              >
+                高德地图打车
+              </a>
+              ）
+            </p>
           </div>
           <ol>
             <li>
