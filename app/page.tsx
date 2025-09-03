@@ -76,6 +76,15 @@ export default function Page() {
 
         <section id="embark">
           <h2>登船流程（上海吴淞口）</h2>
+          <div className="notice" style={{ marginBottom: 10 }}>
+            <p>
+              请务必在开航日前 45 天至 72 小时前完成在线值船，打印“登船证”和行李条，并于登船当天携带。
+            </p>
+            <p>
+              码头办理登船时间为登船当日 11:30–14:30，请务必按照“登船证”的“指定到达时间”前往码头，切勿早到或迟到。
+            </p>
+            <p>上海码头地址：上海市宝山区吴淞口宝杨路 1 号</p>
+          </div>
           <ol>
             <li>
               按船票/APP显示的批次到达 <strong>吴淞口国际邮轮港</strong>
@@ -179,15 +188,15 @@ export default function Page() {
                 <tr>
                   <td>9/28（周六）</td>
                   <td>日本 · 鹿儿岛</td>
-                  <td>上午</td>
-                  <td>傍晚</td>
+                  <td>07:00</td>
+                  <td>16:00</td>
                   <td>预计上岸 6–8 小时</td>
                 </tr>
                 <tr>
                   <td>9/29（周日）</td>
                   <td>日本 · 冲绳（那霸）</td>
-                  <td>上午</td>
-                  <td>傍晚</td>
+                  <td>13:00</td>
+                  <td>22:00</td>
                   <td>预计上岸 7–9 小时</td>
                 </tr>
                 <tr>
