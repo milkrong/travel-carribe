@@ -1,5 +1,7 @@
 import LiveWeather from './components/LiveWeather';
 import TripChecklist from './components/TripChecklist';
+import ShowCalendar from './components/ShowCalendar';
+import ShipMap from './components/ShipMap';
 
 export default function Page() {
   return (
@@ -14,6 +16,8 @@ export default function Page() {
             <a href="#prep">出发前准备</a>
             <a href="#embark">登船流程</a>
             <a href="#onboard">船上攻略</a>
+            <a href="#shows">演出日历</a>
+            <a href="#ship-map">船舶地图</a>
             <a href="#itinerary">行程与靠港</a>
             <a href="#kagoshima">鹿儿岛上岸</a>
             <a href="#okinawa">冲绳（那霸）上岸</a>
@@ -36,6 +40,9 @@ export default function Page() {
           <strong>说明：</strong> 以下时间为参考范例，最终以行前邮件 /
           皇家APP船期与当日“上船最后时间 All aboard”通知为准。
         </section>
+
+        <ShowCalendar />
+        <ShipMap />
 
         <section id="prep">
           <h2>出发前准备</h2>
