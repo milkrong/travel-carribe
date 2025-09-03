@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 export default function ShipMap() {
   const [open, setOpen] = useState(false);
-  const imgSrc = '/mmexport8e3d455f9c39fef99d9d6887080d12a9_1756890074427.png';
+  const imgSrc = '/guide.png';
 
   return (
     <section id="ship-map" className="card">
