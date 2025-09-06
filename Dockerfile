@@ -3,8 +3,8 @@ FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* package-lock.json* yarn.lock* ./
 RUN apk add --no-cache libc6-compat && \
-    if [ -f pnpm-lock.yaml ]; then corepack enable && corepack prepare pnpm@9.12.2 --activate && pnpm i --frozen-lockfile; \
-    elif [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+    if [ -f pnpm-lock.yaml ]; then corepack enable && corepack prepare pnpm@9.12.2 --activate && pnpm i; \
+    elif [ -f yarn.lock ]; then yarn; \
     else npm ci; fi
 
 FROM node:20-alpine AS builder
